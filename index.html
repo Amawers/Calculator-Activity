@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            mobile: "375px",
+
+            sm: "576px",
+            // => @media (min-width: 576px) { ... }
+
+            md: "960px",
+            // => @media (min-width: 960px) { ... }
+
+            lg: "1440px",
+            // => @media (min-width: 1440px) { ... }
+          },
+          extend: {
+            width: {
+              22: "5.90rem",
+            },
+            height: {
+              100: "21.5rem",
+              110: "30rem",
+              115: "35rem",
+            },
+            colors: {
+              darkish: "rgb(54,71,79)",
+              hoverlightdarkish: "hsl(199, 19%, 35%)",
+              muchdarkish: "rgb(24,33,42)",
+              hoverdarkish: "hsl(210, 27%, 16%)",
+              whitish: "rgb(229,229,229)",
+              hoverwhitish: "hsl(0, 0%, 80%)",
+              equalsign: "rgb(255,101,49)",
+              hoverequalsign: "hsl(15, 100%, 50%)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="flex justify-center m-5 bg-slate-200">
+    <div class="w-80 h-115 bg-darkish rounded-t-lg rounded-b-lg">
+      <header class="flex items-center justify-between">
+        <section class="p-4 text-whitish font-semibold text-lg flex flex-col">
+          Calculator
+          <sub> by dacoroon</sub>
+        </section>
+        <button class="w-10 h-10 hover:bg-hoverlightdarkish mr-3 rounded-full">
+          <i class="fa-solid fa-ellipsis-vertical text-whitish"> </i>
+        </button>
+      </header>
+
+      <main
+        class="flex flex-col items-center justify-centermin-w-full min-h-full"
+      >
+        <section
+          class="w-72 h-36 elf-end flex flex-col justify-center items-end"
+        >
+          <div class="text-whitish text-sm">69x69</div>
+          <div class="font-semibold text-white text-4xl">4,761</div>
+        </section>
+        <i class="fa-solid fa-grip-lines text-whitish"></i>
+        <section
+          class="flex flex-col flex-wrap justify-center text-whitish gap-2 font-semibold bg-muchdarkish h-100 rounded-b-lg"
+        >
+          <div class="flex w-80">
+            <button class="w-20 h-14 hover:bg-hoverdarkish">AC</button>
+            <button class="w-20 h-14 hover:bg-hoverdarkish">DEL</button>
+            <button class="w-20 h-14 hover:bg-hoverdarkish">%</button>
+            <button
+              class="w-14 h-14 bg-whitish text-muchdarkish rounded-full ml-3 hover:bg-hoverwhitish"
+            >
+              /
+            </button>
+          </div>
+          <div class="flex">
+            <button class="w-20 h-14 hover:bg-hoverdarkish">7</button>
+            <button class="w-20 h-14 hover:bg-hoverdarkish">8</button>
+            <button class="w-20 h-14 hover:bg-hoverdarkish">9</button>
+            <button
+              class="w-14 h-14 bg-whitish text-muchdarkish rounded-full ml-3 hover:bg-hoverwhitish"
+            >
+              x
+            </button>
+          </div>
+          <div class="flex">
+            <button class="w-20 h-14 hover:bg-hoverdarkish">4</button>
+            <button class="w-20 h-14 hover:bg-hoverdarkish">5</button>
+            <button class="w-20 h-14 hover:bg-hoverdarkish">6</button>
+            <button
+              class="w-14 h-14 bg-whitish text-muchdarkish rounded-full ml-3 hover:bg-hoverwhitish"
+            >
+              -
+            </button>
+          </div>
+          <div class="flex">
+            <button class="w-20 h-14 hover:bg-hoverdarkish">1</button>
+            <button class="w-20 h-14 hover:bg-hoverdarkish">2</button>
+            <button class="w-20 h-14 hover:bg-hoverdarkish">3</button>
+            <button
+              class="w-14 h-14 bg-whitish text-muchdarkish rounded-full ml-3 hover:bg-hoverwhitish"
+            >
+              +
+            </button>
+          </div>
+          <div class="flex">
+            <button class="w-20 h-14 hover:bg-hoverdarkish">.</button>
+            <button class="w-20 h-14 hover:bg-hoverdarkish">0</button>
+            <button
+              class="w-36 h-14 bg-equalsign text-muchdarkish rounded-lg ml-3 hover:bg-hoverequalsign"
+            >
+              =
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/8b1fe3a3fd.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
