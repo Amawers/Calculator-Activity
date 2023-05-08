@@ -83,6 +83,8 @@ dot.addEventListener('click', function() {
   displayInput();
 });
 
+
+
 //for operators hallerrr
 let plus = document.querySelector('.plus');
 plus.addEventListener('click', function(){
@@ -130,6 +132,11 @@ del.addEventListener('click', function(){
     deleteInput();
 })
 
+
+
+
+
+
 let clear = document.querySelector('.clear');
 clear.addEventListener('click', function(){
     firstNumbersArr = [];
@@ -170,35 +177,36 @@ function addInputs(input) {
   
 
   function calculate() {
-    let firstNumbers = parseFloat(firstNumbersArr.join(""));
-    let secondNumbers = parseFloat(secondNumbersArr.join(""));
+    let firstNumber = parseFloat(firstNumbersArr.join(""));
+    let secondNumber = parseFloat(secondNumbersArr.join(""));
   
     if (operator == "+") {
-      let result = firstNumbers + secondNumbers;
+      let result = firstNumber + secondNumber;
       firstNumbersArr = [result]; // store result as the first number
     } else if (operator == "-") {
-      let result = firstNumbers - secondNumbers;
+      let result = firstNumber - secondNumber;
       firstNumbersArr = [result];
     } else if (operator == "x") {
-      let result = firstNumbers * secondNumbers;
+      let result = firstNumber * secondNumber;
       firstNumbersArr = [result];
     } else if (operator == "/") {
-      let result = firstNumbers / secondNumbers;
+      let result = firstNumber / secondNumber;
       firstNumbersArr = [result];
     } else if (operator == "%") {
-      let result = firstNumbers % secondNumbers;
+      let result = (firstNumber / 100) * secondNumber;
       firstNumbersArr = [result];
     }
-    
+  
     // reset for further calculations
     secondNumbersArr = [];
     inputDisplay = [];
     det = "second";
   
-    let displayResult = document.querySelector('.results');
+    let displayResult = document.querySelector(".results");
     displayResult.textContent = firstNumbersArr[0];
     return firstNumbersArr[0];
-}
+  }
+  
 
   
 function displayInput(){
