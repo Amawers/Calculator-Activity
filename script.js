@@ -83,59 +83,67 @@ dot.addEventListener('click', function() {
   displayInput();
 });
 
-
-
 //for operators hallerrr
+
 let plus = document.querySelector('.plus');
 plus.addEventListener('click', function(){
+    if (det === "second" && secondNumbersArr.length > 0) {
+        calculate();
+    }
     det = "second";
     operator = "+";
     inputDisplay.push("+");
-    displayInput();
-    
-})
+    displayInput();    
+});
 
 let minus = document.querySelector('.minus');
 minus.addEventListener('click', function(){
+    if (det === "second" && secondNumbersArr.length > 0) {
+        calculate();
+    }
     det = "second";
     operator = "-";
     inputDisplay.push("-");
     displayInput();
-})
+});
 
 let times = document.querySelector('.times');
 times.addEventListener('click', function(){
+    if (det === "second" && secondNumbersArr.length > 0) {
+        calculate();
+    }
     det = "second";
     operator = "x";
     inputDisplay.push("x");
     displayInput();
-})
+});
 
 let divide = document.querySelector('.divide');
 divide.addEventListener('click', function(){
+    if (det === "second" && secondNumbersArr.length > 0) {
+        calculate();
+    }
     det = "second";
     operator = "/";
     inputDisplay.push("/");
     displayInput();
-})
+});
 
 let percent = document.querySelector('.percent');
 percent.addEventListener('click', function(){
+    if (det === "second" && secondNumbersArr.length > 0) {
+        calculate();
+    }
     det = "second";
     operator = "%";
     inputDisplay.push("%");
     displayInput();
-})
+});
 
 let del = document.querySelector('.del');
 del.addEventListener('click', function(){
     deleteInput();
 })
-
-
-
-
-
 
 let clear = document.querySelector('.clear');
 clear.addEventListener('click', function(){
@@ -148,11 +156,15 @@ clear.addEventListener('click', function(){
     
 })
 
-let equals = document.querySelector('.equals')
+let equals = document.querySelector('.equals');
 equals.addEventListener('click', function(){
-    calculate();
-    det = "";
-})
+    if (det === "second" && secondNumbersArr.length > 0) {
+        calculate(); // Perform the calculation for the first operator
+        det = "first"; // Set det to "first" to perform the second calculation with the result
+        displayInput(); // Update the input display
+    }
+});
+
 
 //functions for different processes hehe 
 function addInputs(input) {
